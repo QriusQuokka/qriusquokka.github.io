@@ -23,8 +23,7 @@ package-lock.json
 !.vscode/tasks.json
 
 # Misc
-_sass/vendors
-assets/js/dist
+# _sass/vendors and assets/js/dist removed to track built assets
 
 # Hidden system files
 *~
