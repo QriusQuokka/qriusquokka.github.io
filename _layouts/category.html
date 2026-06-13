@@ -12,13 +12,41 @@ layout: page
     <span class="lead text-muted ps-2">{{ page.posts | size }}</span>
   </h1>
 
-  <ul class="content ps-0">
-    {% for post in page.posts %}
-      <li class="d-flex justify-content-between px-md-3">
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <span class="dash flex-grow-1"></span>
-        {% include datetime.html date=post.date class='text-muted small text-nowrap' lang=lang %}
-      </li>
-    {% endfor %}
-  </ul>
+  {% if page.title == 'Project' %}
+    <div class="project-card-grid">
+      {% for post in page.posts %}
+        <a href="{{ post.url | relative_url }}" class="project-card-item">
+          <div class="project-card-label">Project</div>
+          <h3 class="project-card-title">{{ post.title }}</h3>
+          <p class="project-card-desc">
+            {% if post.description %}
+              {{ post.description }}
+            {% else %}
+              {{ post.content | strip_html | truncate: 100 }}
+            {% endif %}
+          </p>
+          <div class="project-card-footer">
+            <div class="project-card-tags">
+              {% for tag in post.tags limit: 3 %}
+                <span class="project-tag-chip">{{ tag }}</span>
+              {% endfor %}
+            </div>
+            <span class="project-card-date">
+              {% include datetime.html date=post.date lang=lang %}
+            </span>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  {% else %}
+    <ul class="content ps-0">
+      {% for post in page.posts %}
+        <li class="d-flex justify-content-between px-md-3">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <span class="dash flex-grow-1"></span>
+          {% include datetime.html date=post.date class='text-muted small text-nowrap' lang=lang %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
 </div>

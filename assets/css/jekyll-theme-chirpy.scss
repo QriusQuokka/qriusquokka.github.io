@@ -9,3 +9,91 @@
 ';
 
 /* append your custom style below */
+
+/* ── Projects 섹션 (홈 하단 + Category 페이지) ── */
+.project-divider {
+  margin: 2rem 0 1.5rem;
+  border-color: var(--border-color);
+}
+
+.project-section-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  color: var(--heading-color);
+}
+
+.project-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.project-card-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.2rem 1.3rem;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+
+  &:hover {
+    border-color: var(--link-color);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.project-card-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--link-color);
+}
+
+.project-card-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.project-card-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted-color);
+  line-height: 1.6;
+  flex: 1;
+  margin: 0;
+}
+
+.project-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.72rem;
+  color: var(--text-muted-color);
+  margin-top: auto;
+}
+
+.project-card-tags {
+  display: flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+}
+
+.project-tag-chip {
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 0.1rem 0.45rem;
+  font-size: 0.66rem;
+  color: var(--text-muted-color);
+}
