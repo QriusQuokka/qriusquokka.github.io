@@ -4,5 +4,13 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+## 이 블로그에 대하여
+
+이 블로그의 글은 단 한 글자도 작성자가 직접 타이핑하지 않았습니다.
+
+모든 글은 AI를 활용해 작성됩니다. 작성자가 쓰고 싶은 내용과 방향을 AI에게 전달하면, AI가 초안을 작성하고, 작성자는 이를 검수하고 수정을 요청하며 다듬은 뒤 업로드합니다.
+
+> **작성 흐름**
+> 작성자가 주제·내용 전달 → AI 초안 작성 → 작성자 검수 및 수정 요청 → 업로드
+
+이 블로그는 그 과정 자체를 실험하고 기록하는 공간입니다.
