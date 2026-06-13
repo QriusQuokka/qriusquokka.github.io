@@ -43,7 +43,10 @@ layout: default
   {% assign normal_end = normal_start | plus: normal_size | minus: 1 %}
 
   {% for i in (normal_start..normal_end) %}
-    {% assign posts = posts | push: all_normal[i] %}
+    {% assign _post = all_normal[i] %}
+    {% if _post %}
+      {% assign posts = posts | push: _post %}
+    {% endif %}
   {% endfor %}
 {% endif %}
 
