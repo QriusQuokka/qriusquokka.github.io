@@ -129,9 +129,9 @@ comments:
   # Giscus options › https://giscus.app
   giscus:
     repo: QriusQuokka/QriusQuokka.github.io # <gh-username>/<repo>
-    repo_id: R_kgDOSxzfqg
+    repo_id: R_kgDOSz7_hA
     category: Announcements
-    category_id: DIC_kwDOSxzfqs4C-mKP
+    category_id: DIC_kwDOSz7_hM4C_UHZ
     mapping: pathname # optional, default to 'pathname'
     strict: "1" # optional, default to '0'
     input_position: bottom # optional, default to 'bottom'
